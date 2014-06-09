@@ -1,0 +1,31 @@
+ public function mycv($username){
+  $countryMain=Country::all();
+  $contactLanguageMain=LookUpValues::where('Name','=','ContactLanguage')->get();
+ // $SocialMediaAccount=LookUpValues::where('Name','=','ContactLanguage')->get();
+  $personalData=Users::where('Username','=',$username)->first();
+  $country=$personalData->Country;
+  $countryRaw= Country::find($country);
+  $personalData->Country=$countryRaw ->Name;
+  $city=$personalData->City;
+  $MoreUserProperties=MoreUserProperties::where('Username','=',$username)->where('PropertyName','=','SocialMediaAccount')->first();
+  //$SocialMediaAccount=MoreUserProperties::where('PropertyName','=','SocialMediaAccount')->where('PropertyValue','=','facebook')->first();
+  
+  if($city !=''){
+  $cityRaw= City::find($city);
+  $personalData->City= $cityRaw->Name;
+  }else {
+  $personalData->City="";	  
+  }
+  $ContactLanguage=$personalData->ContactLanguage;
+  $ContactLanguageRaw= LookUpValues::find($ContactLanguage);
+  $personalData->ContactLanguage= $ContactLanguageRaw->Value;
+  return View::make('cv.index',array('personalData'=>$personalData,'countryMain'=>$countryMain,'contactLanguageMain'=>$contactLanguageMain,'MoreUserProperties'=>$MoreUserProperties));  
+	  
+	  
+  }
+  public function editPersonalData($id){
+  $personalData=Users::where('Username','=',$id)->first();
+  $MoreUserProperties=MoreUserProperties::where('Username','=',$username)->where('PropertyName','=','SocialMediaAccount')->first()->first();
+   return Response::json(array('success'=>true,'Username'=>$personalData->Username,'FirstName'=>$personalData->FirstName,'MiddleName'=>$personalData->MiddleName,'LastName'=>$personalData->LastName,'PrimaryEmail'=>$personalData->PrimaryEmail,'Country'=>$personalData->Country,'City'=>$personalData->City,'ContactLanguage'=>$personalData->ContactLanguage,'SocialMediaAccount'=>$MoreUserProperties->MoreUserProperties)); 	  
+	  
+  }

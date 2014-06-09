@@ -1,0 +1,230 @@
+@import url(../fonts/ge/stylesheet.css);
+ .my-table{ direction: ltr; font-family: 'tahoma'; font-weight: normal;}
+.my-table form {
+margin:0px;	
+	
+}
+.my-table{
+  border-collapse:collapse;
+  width:96%;
+    text-align: center;
+	font-size:14px;
+}
+
+.table-img img{ width: 55px; height: 55px;  border-radius: 2px }
+
+.my-table{
+  border:1px solid #2293b0;
+    color: #272727;
+}
+
+.my-table thead{
+  background:#ccc;
+}
+
+ 
+.my-table thead{
+  color:#000;
+    font-weight: normal;   
+}
+
+.my-table tr{
+  -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+.my-table th,.my-table td{
+  text-align:center;
+  padding:5px 0;
+    border: 1px solid #ccc;
+}
+
+.my-table td a{
+text-decoration: none;
+     color: #272727;
+}
+
+.my-table td a{
+text-decoration: none;
+ }
+
+
+.my-table th{ font-weight: normal !important; padding: 10px !important;;  }
+
+.my-table tbody tr:nth-child(even){
+  background:#ecf0f1;
+}
+
+.my-table tbody tr:hover{
+background:#f1f1f1;
+  color:#000;
+      -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+.fixed{
+  top:0;
+  position:fixed;
+  width:auto;
+  display:none;
+  border:none;
+}
+
+.scrollMore{
+  margin-top:600px;
+}
+
+.up{
+  cursor:pointer;
+}
+
+.edit a{ color: #27ae60;; display: block; width: 100%; height: 100%;}
+.edit a i{ color: #27ae60; font-size: 16px; margin-left: 5px; }
+
+.my-table .delete .tb-btn{ color: #e74c3c;font-size:16px; }
+.my-table .delete .tb-btn i{ color: #e74c3c; font-size: 16px;  }
+
+.my-table  .options a{ color: #2980b9;; font-size:14px; padding:0; }
+.my-table .options a i{ color: #2980b9; font-size: 16px; margin-left: 5px; }
+
+.my-table .edit a  ,.my-table .options a ,.my-table .delete a{ 
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s; }
+  
+
+
+
+.edit a:Hover , .options a:hover ,.delete .tb-btn:hover{ color: #000; -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s; }
+  
+
+
+.tb-btn{
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+    background: none;
+    font-family: 'ge_lt';
+}
+
+
+
+
+/*
+    <ul class="pagination">
+  <li class="disabled"><a href="#">&laquo;</a></li>
+  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>*/
+
+.pagination{ margin: 0; padding: 0;
+list-style-type: none;}
+
+.pagination {
+  display: inline-block;
+  padding-right: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+      border-color: #dddddd;
+    direction: rtl; text-align: right;
+}
+
+.pagination > li {
+  display: inline;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: right;
+  padding: 6px 12px;
+  margin-right: -1px;
+  line-height: 1.428571429;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+    color: #272727;
+    font-family: calibri;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-right: 0;
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+}
+
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+}
+
+.pagination > li > a:hover,.pagination > li > a:active,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: #eeeeee;
+    color: #333;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  cursor: default;
+  background-color: #2293b0;
+  border-color: #2293b0;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #999999;
+  cursor: not-allowed;
+  background-color: #ffffff;
+  border-color: #dddddd;
+    direction: rtl; text-align: right;
+}
+
+.my-table-left {
+text-align:left !important;	
+}
+
+.my-table-left td {
+text-align:left !important;	
+padding:10px;	
+}
